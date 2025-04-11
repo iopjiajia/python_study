@@ -1,0 +1,9 @@
+def show_magicians(magician_names):
+    for name in magician_names:
+        print(name.title())
+    def make_great(great_names):
+        for name in great_names:
+            print("Great," + name.title() + "!")
+    make_great(magician_names)
+magician_names = ['sarah','john','mike','johnson']
+show_magicians(magician_names)
