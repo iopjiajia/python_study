@@ -1,0 +1,23 @@
+def make_album(artist_name,album_title,track=''):
+    """Buliding a dictionary that describing a music album."""
+    album = {'name':artist_name, 'title':album_title}
+    if track:
+        album['track'] = track
+    return album
+albums=[]
+
+while True:
+    print("\nPlease tell me the album:")
+    print("(enter 'q' at any time to quit)")
+
+    name = input("Artist's name is: ")
+    if name == 'q':
+        break
+
+    title = input("Album's title is: ")
+    if title == 'q':
+        break
+
+    music = make_album(name,title)
+    albums.append(music)
+print(albums)
