@@ -1,0 +1,29 @@
+class Restaurant():
+    """A simple attempt tp model a restaurant."""
+
+    def __init__(self,restaurant_name,restaurant_type):
+        """Initilize name annd cuisiing type attributes."""
+        self.name = restaurant_name
+        self.type = restaurant_type
+
+    def describe_restaurant(self):
+        """Describe a restaurant's situation."""
+        print(self.name.title() + " is very popular.")
+        print(self.type.title() + " is very absorbing.")
+
+    def open_restaurant(self):
+        """Indicating the restaurant is open."""
+        print(self.name.title() + " is open.")
+
+famous_restaurant = Restaurant('big star','dumplings')
+attractive_restaurant = Restaurant('dreamy','coasted fish')
+interesing_restaurant = Restaurant('like or love','beef')
+
+print("There is a famous restaurant called " + famous_restaurant.name.title() + ".")
+print("I really like its " + famous_restaurant.type + ".")
+
+#Calling two methods.
+famous_restaurant.describe_restaurant()
+famous_restaurant.open_restaurant()
+attractive_restaurant.describe_restaurant()
+interesing_restaurant.describe_restaurant()
