@@ -27,3 +27,58 @@ famous_restaurant.describe_restaurant()
 famous_restaurant.open_restaurant()
 attractive_restaurant.describe_restaurant()
 interesing_restaurant.describe_restaurant()
+
+
+
+
+
+class Restaurant():
+    """A simple attempt tp model a restaurant."""
+
+    def __init__(self,restaurant_name,restaurant_type,new_number):
+        """Initilize name annd cuisiing type attributes."""
+        self.name = restaurant_name
+        self.type = restaurant_type
+        self.number_served = 0
+        self.number = new_number
+
+    def describe_restaurant(self):
+        """Describe a restaurant's situation."""
+        print(self.name.title() + " is very popular.")
+        print(self.type.title() + " is very absorbing.")
+
+    def open_restaurant(self):
+        """Indicating the restaurant is open."""
+        print(self.name.title() + " is open.")
+
+    def restaurant(self):
+        """Indicating the default of the number of customers."""
+        print("The restaurant served " + str(self.number) + " customers yesterday.")
+
+    def set_number_served(self,number):
+        """Describe the number of customers the restaurant has served."""
+        self.number = number
+    
+    def increment_number_served(self,numbers):
+        """Describe the number of customers who've been served."""
+        self.number += numbers
+    
+
+famous_restaurant = Restaurant('big star','dumplings',233)
+attractive_restaurant = Restaurant('dreamy','coasted fish',210)
+interesing_restaurant = Restaurant('like or love','beef',100)
+
+print("There is a famous restaurant called " + famous_restaurant.name.title() + ".")
+print("I really like its " + famous_restaurant.type + ".")
+print("The restaurant has served " + str(famous_restaurant.number_served) + " customers today.")
+
+#Calling two methods.
+famous_restaurant.describe_restaurant()
+famous_restaurant.open_restaurant()
+attractive_restaurant.describe_restaurant()
+interesing_restaurant.describe_restaurant()
+attractive_restaurant.set_number_served(223)
+attractive_restaurant.restaurant()
+attractive_restaurant.increment_number_served(30)
+attractive_restaurant.restaurant()
+
